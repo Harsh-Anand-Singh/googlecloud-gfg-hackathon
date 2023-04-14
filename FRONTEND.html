@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feedback Analysis Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Feedback Analysis Dashboard">
+    </header>
+    <main>
+      <section id="form-section">
+        <div id="form-container">
+          <h1>Welcome to the Feedback Analysis Dashboard!</h1>
+          <p>This dashboard displays the results of sentiment analysis and entity extraction on customer feedback data.</p>
+          <form method="POST" action="/analyze">
+            <label for="bucket">Bucket:</label>
+            <input type="text" name="bucket" id="bucket"><br>
+            <label for="file">File:</label>
+            <input type="text" name="file" id="file"><br>
+            <input type="submit" value="Analyze Feedback">
+          </form>
+        </div>
+      </section>
+      <section id="results-section">
+        <div id="results-container">
+          <h2>Results</h2>
+          <div id="results"></div>
+        </div>
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
